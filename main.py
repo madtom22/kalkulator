@@ -3,7 +3,7 @@ logging.basicConfig(level=logging.INFO)
 
 def addition(a,b):
     logging.info(f'Dodaję {a} + {b}')
-    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(a + b,2))
+    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ', round(a + b,2))
 
 def addition_more_than_2(c):
     e = 0
@@ -13,15 +13,15 @@ def addition_more_than_2(c):
         e = e + d
         f.append(d)
     logging.info(f'Składnik które zostały dodane do siebie: {f}')
-    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(e,2))
+    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ', round(e,2))
 
 def subtraction(a,b):
     logging.info(f'Odejmuję {a} - {b}')
-    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(a - b,2))
+    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ', round(a - b,2))
 
 def multiplication(a,b):
     logging.info(f'Mnożę {a} * {b}')
-    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(a * b,2))
+    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ', round(a * b,2))
 
 def multiplication_more_than_2(c):
     e = 1
@@ -30,12 +30,15 @@ def multiplication_more_than_2(c):
         d = float(input(f'Podaj składnik {i}: '))
         e = e * d
         f.append(d)
-    logging.info(f'Składnik które zostały pomnożone przez siebie: {f}')
-    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(e,2))
+    logging.info(f'Składnik które zostały pomnożone przez siebie to: {f}')
+    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ', round(e,2))
 
 def division(a,b):
-    logging.info(f'Dzielę {a} / {b}')
-    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(a / b,2))
+    try:
+        logging.info(f'Dzielę {a} / {b}')
+        print('Wynik z dokładnością do dwóch miejsc po przecinku to: ', round(a / b,2))
+    except ZeroDivisionError:
+        print('Pamiętaj, kolego: nie dziel przez 0!')
 
 if __name__ == "__main__":
 
@@ -73,5 +76,5 @@ if __name__ == "__main__":
         b = float(input('Podaj składnik 2: '))
         division(a, b)
 
-    elif x <1 or x > 4:
+    elif x < 1 or x > 4:
         print('Podano błędny numer.')
