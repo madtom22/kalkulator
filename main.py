@@ -5,6 +5,16 @@ def addition(a,b):
     logging.info(f'Dodaję {a} + {b}')
     print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(a + b,2))
 
+def addition_more_than_2(c):
+    e = 0
+    f = []
+    for i in range(1,c+1):
+        d = float(input(f'Podaj składnik {i}: '))
+        e = e + d
+        f.append(d)
+    logging.info(f'Składnik które zostały dodane do siebie: {f}')
+    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(e,2))
+
 def subtraction(a,b):
     logging.info(f'Odejmuję {a} - {b}')
     print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(a - b,2))
@@ -12,6 +22,16 @@ def subtraction(a,b):
 def multiplication(a,b):
     logging.info(f'Mnożę {a} * {b}')
     print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(a * b,2))
+
+def multiplication_more_than_2(c):
+    e = 1
+    f = []
+    for i in range(1,c+1):
+        d = float(input(f'Podaj składnik {i}: '))
+        e = e * d
+        f.append(d)
+    logging.info(f'Składnik które zostały pomnożone przez siebie: {f}')
+    print('Wynik z dokładnością do dwóch miejsc po przecinku to: ',round(e,2))
 
 def division(a,b):
     logging.info(f'Dzielę {a} / {b}')
